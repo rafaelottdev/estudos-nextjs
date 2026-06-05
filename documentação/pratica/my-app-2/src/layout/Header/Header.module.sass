@@ -1,0 +1,141 @@
+.header
+    height: 55px
+
+    padding: 0px 50px 0px 30px
+
+    display: flex
+    align-content: center
+    justify-content: space-between
+
+    background: #0f0f0f
+    color: white
+
+    .left_side
+        display: flex
+        align-items: center
+        gap: 25px
+        // background-color: red
+
+        .menu_wrapp
+            width: 27px
+            height: 27px
+            cursor: pointer
+            color: white
+            background-color: transparent
+
+            svg
+                font-size: 27px
+
+        .logo_wrapp
+            display: flex
+            align-items: center
+            gap: 2px
+            position: relative
+            z-index: 1
+
+            svg
+                font-size: 27px
+                fill: red
+
+            p
+                font-size: 21px
+
+            &::after
+                content: ""
+                width: 10px
+                height: 10px
+                background-color: white
+                position: absolute
+                left: 8px
+                z-index: -1
+            
+
+    .mid_side
+        display: flex
+        align-items: center
+        gap: 20px
+
+        .search_wrapp
+            position: relative
+
+            input 
+                width: 550px
+                height: 37px
+
+                padding: 0px 100px 0px 20px
+
+                box-shadow: 0px 0px 1px 0px white
+                border-radius: 30px
+
+                font-size: 16px
+                color: white
+                background-color: #121212
+
+            button
+                height: 100%
+                padding: 0px 15px
+
+                position: absolute
+                top: 50%
+                right: -1px
+                transform: translateY(-50%)
+
+                background-color: blue
+
+                border-top-right-radius: 30px
+                border-bottom-right-radius: 30px
+                background-color: #222222
+
+                svg 
+                    font-size: 27px
+                    fill: white
+
+        .mic_wrapp
+            width: 40px
+            height: 40px
+
+            display: flex
+            align-items: center
+            justify-content: center
+
+            border-radius: 50%
+            color: white
+            background-color: #222222
+
+            svg 
+                font-size: 29px
+
+    .right_side
+        display: flex
+        align-items: center
+        gap: 20px
+
+        .create_wrapp
+            padding: 8px 20px
+            display: flex
+            gap: 5px
+
+            cursor: pointer
+            border-radius: 20px
+            background-color: #222222
+
+            svg
+                font-size: 21px
+
+        .notification_wrapp
+            cursor: pointer
+            svg
+                font-size: 32px
+
+        .current_user
+            width: 30px
+            height: 30px
+
+            display: flex
+            align-items: center
+            justify-content: center
+
+            cursor: pointer
+            border-radius: 50%
+
+            background-color: blue

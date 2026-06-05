@@ -1,0 +1,10 @@
+home
+    topics (topbar)
+        topic page
+    subscriptions (sidebar)
+        subscription channel page
+    you (sidebar)
+        history
+            history page
+        playlists
+            playlists page
