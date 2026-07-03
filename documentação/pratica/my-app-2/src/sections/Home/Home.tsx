@@ -7,7 +7,14 @@ function Home() {
         <section className={styles.home}>
             <Topbar />
 
-            <section></section>
+            <section className={styles.videos_container}>
+                <div className={styles.video_card}></div>
+                <div className={styles.video_card}></div>
+                <div className={styles.video_card}></div>
+                <div className={styles.video_card}></div>
+                <div className={styles.video_card}></div>
+                <div className={styles.video_card}></div>
+            </section>
         </section>
     )
 }

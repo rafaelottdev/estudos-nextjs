@@ -1,6 +1,8 @@
+import styles from "./Footer.module.sass"
+
 function Footer() {
     return (
-        <footer>Footer</footer>
+        <footer className={styles.footer}>Feito por Rafaelottdev. Todos os direitos reservados</footer>
     )
 }
 

@@ -10,16 +10,16 @@ function Sidebar() {
 
                 <ul className={styles.Subscriptions_list}>
                     <li>
-                        <Link href="/channel/alanzoka">Alanzoka</Link>
+                        <Link href="/channels/alanzoka">Alanzoka</Link>
                     </li>
                     <li>
-                        <Link href="/channel/mano-dayvin">Mano Dayvin</Link>
+                        <Link href="/channels/mano-dayvin">Mano Dayvin</Link>
                     </li>
                     <li>
-                        <Link href="/channel/peter-aqui">Peter Aqui</Link>
+                        <Link href="/channels/peter-aqui">Peter Aqui</Link>
                     </li>
                     <li>
-                        <Link href="/channel/gaveta">Gaveta</Link>
+                        <Link href="/channels/gaveta">Gaveta</Link>
                     </li>
                 </ul>
             </section>
