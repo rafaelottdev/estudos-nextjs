@@ -5,6 +5,7 @@ import Link from "next/link"
 import Navitem, { navItemInterface } from "../Navitem/Navitem"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
+import { useTheme } from "next-themes"
 
 import styles from "./Navbar.module.sass"
 
@@ -12,7 +13,7 @@ import { FaXmark } from "react-icons/fa6";
 import { IoIosMenu } from "react-icons/io";
 import { CiLight } from "react-icons/ci";
 import { CiDark } from "react-icons/ci";
-import { ThemeToggle } from "../theme/ThemeToggle"
+import { ThemeToggle } from "../ThemeToggle/ThemeToggle"
 
 function Navbar() {
     const items: navItemInterface[] = [
@@ -44,7 +45,8 @@ function Navbar() {
 
     const pathname = usePathname()
 
-    // const [openMenu, setOpenMenu] = useState<boolean>(false)
+    const [openMenu, setOpenMenu] = useState<boolean>(false)
+    const { theme, setTheme } = useTheme()
 
     return (
         <header className={styles.header}>
@@ -60,6 +62,10 @@ function Navbar() {
                         ))
                     }
                 </ul>
+
+                {/* <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+                    dark mode
+                </button> */}
 
                 <ThemeToggle />
 

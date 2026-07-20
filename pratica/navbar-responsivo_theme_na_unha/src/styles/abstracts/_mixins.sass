@@ -1,0 +1,5 @@
+@mixin apply-theme($theme-map)
+    @each $key, $value in $theme-map
+        --color-#{$key}: #{$value}
+        // --color-bg: ##ffffff
+        // --color-txt: #1a1a1a

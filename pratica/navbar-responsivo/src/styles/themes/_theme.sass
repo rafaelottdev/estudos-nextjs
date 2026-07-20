@@ -1,0 +1,8 @@
+@use "tokens" as t
+@use "../abstracts/_mixins" as *
+
+:root
+    @include apply-theme(t.$light-theme)
+
+[data-theme="dark"]
+    @include apply-theme(t.$dark-theme)

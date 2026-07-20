@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
 import Navbar from "@/components/Navbar/Navbar";
 
@@ -9,18 +10,16 @@ export const metadata: Metadata = {
   description: "Praticando nextjs fazendo um navbar responsivo",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <Navbar />
+          <ThemeProvider>
+            <Navbar />
 
-        {children}
+            {children}
+          </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
