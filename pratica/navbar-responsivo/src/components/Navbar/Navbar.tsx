@@ -10,8 +10,6 @@ import styles from "./Navbar.module.sass"
 
 import { FaXmark } from "react-icons/fa6";
 import { IoIosMenu } from "react-icons/io";
-import { CiLight } from "react-icons/ci";
-import { CiDark } from "react-icons/ci";
 import { ThemeToggle } from "../theme/ThemeToggle"
 
 function Navbar() {
@@ -44,31 +42,33 @@ function Navbar() {
 
     const pathname = usePathname()
 
-    // const [openMenu, setOpenMenu] = useState<boolean>(false)
+    const [openMenu, setOpenMenu] = useState<boolean>(false)
 
     return (
-        <header className={styles.header}>
-            <nav className={styles.nav}>
-                <Link href="/">
-                    <Image src="logo.svg" alt="" width={50} height={50} />
-                </Link>
+        <>
+            <header className={`${styles.header} ${openMenu ? `${styles.show}` : ""}`}>
+                <nav className={styles.nav}>
+                    <Link href="/" className={styles.logo_link}>
+                        <Image src="logo.svg" alt="" width={50} height={50} />
+                    </Link>
 
-                <ul>
-                    {
-                        items.map((item, index) => (
-                            <Navitem key={index} url={item.url} label={item.label} isActive={pathname === item.url} />
-                        ))
-                    }
-                </ul>
+                    <ul className={styles.nav_list}>
+                        {
+                            items.map((item, index) => (
+                                <Navitem key={index} url={item.url} label={item.label} isActive={pathname === item.url} />
+                            ))
+                        }
+                    </ul>
 
-                <ThemeToggle />
+                    <div>
+                        <ThemeToggle />
+                    </div>
+                </nav>
+            </header>
 
-                {/* <button onClick={() => setOpenMenu(!openMenu)}>{openMenu ? <FaXmark /> : <IoIosMenu />}</button> */}
-            </nav>
-        </header>
+            <button className={styles.menu_btn} onClick={() => setOpenMenu(!openMenu)}>{openMenu ? <FaXmark /> : <IoIosMenu />}</button>
+        </>
     )
 }
 
 export default Navbar
-
-// className={`${openMenu ? `${styles.open}` : ""}`}

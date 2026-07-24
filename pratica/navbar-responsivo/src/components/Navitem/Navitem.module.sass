@@ -1,0 +1,12 @@
+@use "../../styles/abstracts/mixins" as *
+    
+.nav_item
+    .nav_link
+        margin-right: 10px
+        padding: 3px 30px
+
+        &:hover
+            color: gray
+            
+        @include respond(tablet)
+            margin-right: 0px

@@ -1,3 +1,5 @@
+import styles from "./Navitem.module.sass"
+
 import Link from "next/link"
 
 export interface navItemInterface {
@@ -8,8 +10,8 @@ export interface navItemInterface {
 
 function Navitem(props: navItemInterface) {
     return (
-        <li>
-            <Link href={props.url}>{props.label}</Link>
+        <li className={styles.nav_item}>
+            <Link href={props.url} className={styles.nav_link}>{props.label}</Link>
         </li>
     )
 }
