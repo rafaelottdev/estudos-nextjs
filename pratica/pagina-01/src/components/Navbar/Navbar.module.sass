@@ -1,0 +1,35 @@
+@use "../../styles/abstracts/mixins" as *
+    
+.header
+    height: 80px
+    padding: 0 50px
+
+    @include flex-header
+    justify-content: space-between
+
+    background-color: black
+    
+    .logo
+        font-size: 32px
+        color: white
+
+    .nav
+        @include flex-header
+
+        .nav_list
+            @include flex-header
+            gap: 30px
+            
+            a
+                font-size: 16px
+                letter-spacing: .5px
+                color: white
+
+                &:hover
+                    color: gray
+
+    .theme_button
+        padding-top: 7px
+        font-size: 27px
+        color: white
+        background-color: transparent
